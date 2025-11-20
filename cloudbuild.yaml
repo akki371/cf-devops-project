@@ -33,7 +33,7 @@ steps:
   - run
   - deploy
   - my-app-stage
-  - --image=gcr.io/temporal-parsetemporal-parser-478606-d2/my-app:$COMMIT_SHA
+  - --image=gcr.io/temporal-parser-478606-d2/my-app:$COMMIT_SHA
   - --region=asia-south1 # Example Stage Region
   - --allow-unauthenticated
 
@@ -49,7 +49,12 @@ steps:
   - '--branch=main'
   # Pass the built image SHA as a substitution variable to the Prod trigger
   - '--substitutions=_IMAGE_SHA=gcr.io/temporal-parser-478606-d2/my-app:$COMMIT_SHA'
-  - '--region=global' # Cloud Build trigger run command requires the trigger region
-  
+  - '--region=asia-south1' # Cloud Build trigger run command requires the trigger region
+
+# This section lists the images that Cloud Build expects to be pushed to Artifact Registry
 images:
 - 'gcr.io/temporal-parser-478606-d2/my-app:$COMMIT_SHA'
+
+# TOP-LEVEL CONFIGURATION FOR LOGGING
+options:
+  logging: CLOUD_LOGGING_ONLY # This specifies that logs should only go to Cloud Logging
