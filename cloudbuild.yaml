@@ -3,6 +3,10 @@ substitutions:
   _PROD_TRIGGER_NAME: 'prod-approval-trigger'
 
 steps:
+
+- name: 'gcr.io/cloud-builders/npm'
+    args: ['install']
+    
 # 1. Build the container image (CI)
 - name: 'gcr.io/cloud-builders/docker'
   id: 'Build Image'
@@ -58,11 +62,7 @@ images:
 # These are top-level build configuration settings, correctly placed.
 # Note: If you are using a Cloud Build Trigger, the 'serviceAccount' specified
 #       here will be ignored in favor of the service account configured
-#       directly on the trigger itself. However, the 'options' will be respected.
-
-steps:
-  - name: 'gcr.io/cloud-builders/npm'
-    args: ['install']
+#       directly on the trigger itself. However, the 'options' will be respected
 
 # Add this line
 logsBucket: 'gs://my_test_bucket_for_cloudrun'
