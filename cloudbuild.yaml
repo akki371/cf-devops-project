@@ -53,3 +53,12 @@ steps:
   
 images:
 - 'gcr.io/temporal-parser-478606-d2/my-app:$COMMIT_SHA'
+
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/temporal-parser-478606-d2/my-image', '.']
+
+serviceAccount: 'projects/temporal-parser-478606-d2/serviceAccounts/136380032856-compute@developer.gserviceaccount.com'
+options:
+  defaultLogsBucketBehavior: REGIONAL_USER_OWNED_BUCKET
+  logging: GCS_ONLY # Or CLOUD_LOGGING_ONLY, depending on your preference
