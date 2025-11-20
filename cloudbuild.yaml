@@ -33,7 +33,7 @@ steps:
   - run
   - deploy
   - my-app-stage
-  - --image=gcr.io/temporal-parsetemporal-parser-478606-d2/my-app:$COMMIT_SHA
+  - --image=gcr.io/temporal-parser-478606-d2/my-app:$COMMIT_SHA # Corrected typo here
   - --region=asia-south1 # Example Stage Region
   - --allow-unauthenticated
 
@@ -50,15 +50,16 @@ steps:
   # Pass the built image SHA as a substitution variable to the Prod trigger
   - '--substitutions=_IMAGE_SHA=gcr.io/temporal-parser-478606-d2/my-app:$COMMIT_SHA'
   - '--region=global' # Cloud Build trigger run command requires the trigger region
-  
+
+# This section lists the images that Cloud Build expects to be pushed to Artifact Registry
 images:
 - 'gcr.io/temporal-parser-478606-d2/my-app:$COMMIT_SHA'
 
-steps:
-- name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/temporal-parser-478606-d2/my-image', '.']
-
+# These are top-level build configuration settings, correctly placed.
+# Note: If you are using a Cloud Build Trigger, the 'serviceAccount' specified
+#       here will be ignored in favor of the service account configured
+#       directly on the trigger itself. However, the 'options' will be respected.
 serviceAccount: 'projects/temporal-parser-478606-d2/serviceAccounts/136380032856-compute@developer.gserviceaccount.com'
 options:
   defaultLogsBucketBehavior: REGIONAL_USER_OWNED_BUCKET
-  logging: GCS_ONLY # Or CLOUD_LOGGING_ONLY, depending on your preference
+  logging: GCS_ONLY # This addresses the error from the previous prompt (option b or c)
