@@ -54,3 +54,6 @@ steps:
 # This section lists the images that Cloud Build expects to be pushed to Artifact Registry
 images:
 - 'gcr.io/temporal-parser-478606-d2/my-app:$COMMIT_SHA'
+
+options:
+  logging: CLOUD_LOGGING_ONLY # This specifies that logs should only go to Cloud Logging
