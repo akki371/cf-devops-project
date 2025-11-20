@@ -59,6 +59,11 @@ images:
 # Note: If you are using a Cloud Build Trigger, the 'serviceAccount' specified
 #       here will be ignored in favor of the service account configured
 #       directly on the trigger itself. However, the 'options' will be respected.
+
+steps:
+  - name: 'gcr.io/cloud-builders/npm'
+    args: ['install']
+
+# Add this line
+logsBucket: 'gs://my-build-logs'
 serviceAccount: 'projects/temporal-parser-478606-d2/serviceAccounts/136380032856-compute@developer.gserviceaccount.com'
-options:
-  logging: CLOUD_LOGGING_ONLY # This addresses the error from the previous prompt (option b or c)
