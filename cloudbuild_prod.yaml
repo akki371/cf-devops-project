@@ -1,0 +1,16 @@
+# cloudbuild_prod.yaml
+steps:
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  id: 'Deploy to PROD'
+  args:
+  - gcloud
+  - run
+  - deploy
+  - my-app-prod # Your Production service name
+  - '--image=$_IMAGE_SHA' # Uses the image tag passed from the main pipeline
+  - '--region=asia-south1' # Your Prod Region
+  - '--allow-unauthenticated' # or required security flags
+
+substitutions:
+  # Define the substitution variable expected by the trigger run command
+  _IMAGE_SHA: 'gcr.io/temporal-parser-478606-d2/my-app:default'

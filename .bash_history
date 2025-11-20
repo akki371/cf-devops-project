@@ -1,0 +1,96 @@
+gcloud auth login
+gcloud config set project temporal-parser-478606-d2
+gcloud services enable run.googleapis.com containerregistry.googleapis.com
+ls
+pwd
+touch app.py requirements.txt Dockerfile
+ls
+vi app.py 
+cat app.py 
+vi app.py 
+cat app.py 
+vi requirements.txt 
+vi Dockerfile 
+cat requirements.txt 1
+cat Dockerfile 
+gcloud builds submit --tag gcr.io/temporal-parser-478606-d2/my-cloudrun-app
+ls
+gcloud run deploy my-cloudrun-app --image gcr.io/temporal-parser-478606-d2/my-cloudrun-app --platform managed --region asia-south1 --allow-unauthenticated
+ls
+cat app.py 
+vi app.py 
+cat app.py 
+vi Dockerfile 
+gcloud run deploy my-cloudrun-app --image gcr.io/temporal-parser-478606-d2/my-cloudrun-app --platform managed --region asia-south1 --allow-unauthenticated
+ls
+gcloud run deploy my-cloudrun-app --image gcr.io/temporal-parser-478606-d2/my-cloudrun-app --platform managed --region asia-south1 --allow-unauthenticated
+docker build -t my-app .
+ls
+docker run -p 8080:8080 my-app
+vi app.py 
+gcloud run deploy my-cloudrun-app --image gcr.io/temporal-parser-478606-d2/my-cloudrun-app --platform managed --region asia-south1 --allow-unauthenticated
+docker run -p 8080:8080 my-app
+pwd
+ls
+vi app.py 
+cat /app/app.py
+vi app.py 
+vi Dockerfile 
+gcloud run deploy my-cloudrun-app --image gcr.io/temporal-parser-478606-d2/my-cloudrun-app --platform managed --region asia-south1 --allow-unauthenticated
+docker run -p 8080:8080 my-app
+vi Dockerfile 
+docker run -p 8080:8080 my-app
+vi app.py 
+docker run -p 8080:8080 my-app
+vi Dockerfile 
+vi app.py 
+cat app.py 
+gcloud builds submit --tag gcr.io/temporal-parser-478606-d2/my-cloudrun-app
+gcloud run deploy my-cloudrun-app --image gcr.io/temporal-parser-478606-d2/my-cloudrun-app --platform managed --region asia-south1 --allow-unauthenticated
+docker run -p 8080:8080 my-app
+docker build -t my-new app .
+docker build -t my-app2 .
+docker images
+docker rmi c77d6ad6909a
+docker container rm 03797c28bbc8
+docker rmi c77d6ad6909a
+docker container ls
+docker ps --ll
+docker ps --all
+docker rm 20df26785d1e
+docker rm 84c78a73884a 81e0b9569047 5127cd05fe45 8c27bf464132 191e87c93bb5 
+docker ps -a
+docker rmi c77d6ad6909a
+docker images
+docker run -p 8080:8080 my-app2
+vi app.py
+docker images
+docker ps -a
+docker rm b46363b7ba57
+docker rmi my-app2
+ls
+docker ps -a
+docker images
+gcloud builds submit --tag gcr.io/temporal-parser-478606-d2/my-cloudrun-app
+gcloud run deploy my-cloudrun-app --image gcr.io/temporal-parser-478606-d2/my-cloudrun-app --platform managed --region asia-south1 --allow-unauthenticated
+ls
+docker ps -a\
+docker ps -a
+docker images
+pwd
+ls
+gcloud install tree
+ls
+pwd
+ls
+vi cloudbuild.yaml
+vi cloudbuild.yaml 
+ls
+cat cloudbuild.yaml 
+vi cloudbuild_prod.yaml
+vi cloudbuild_prod.yaml 
+ls
+ll
+ls
+git init
+git status
