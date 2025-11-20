@@ -7,8 +7,6 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   id: 'Build Image'
   args: ['build', '-t', 'gcr.io/temporal-parser-478606-d2/my-app:$COMMIT_SHA', '.']
-options:
-  logging: CLOUD_LOGGING_ONLY # This specifies that logs should be stored in the GCS bucket
 
 # 2. Push the single image to Artifact Registry (CI)
 - name: 'gcr.io/cloud-builders/docker'
