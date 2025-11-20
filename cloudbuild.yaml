@@ -49,7 +49,7 @@ steps:
   - '--branch=main'
   # Pass the built image SHA as a substitution variable to the Prod trigger
   - '--substitutions=_IMAGE_SHA=gcr.io/temporal-parser-478606-d2/my-app:$COMMIT_SHA'
-  - '--region=global' # Cloud Build trigger run command requires the trigger region
+  - '--region=asia-south1' # Cloud Build trigger run command requires the trigger region
 
 # This section lists the images that Cloud Build expects to be pushed to Artifact Registry
 images:
