@@ -7,9 +7,6 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   id: 'Build Image'
   args: ['build', '-t', 'gcr.io/temporal-parser-478606-d2/my-app:$COMMIT_SHA', '.']
-logsBucket: 'gs://my_test_bucket_for_cloudrun' # Replace with your bucket name
-options:
-  logging: GCS_ONLY # This specifies that logs should be stored in the GCS bucket
 
 # 2. Push the single image to Artifact Registry (CI)
 - name: 'gcr.io/cloud-builders/docker'
@@ -65,3 +62,6 @@ images:
 
 # Add this line
 serviceAccount: 'projects/temporal-parser-478606-d2/serviceAccounts/136380032856-compute@developer.gserviceaccount.com'
+logsBucket: 'gs://my_test_bucket_for_cloudrun' # Replace with your bucket name
+options:
+  logging: GCS_ONLY # This specifies that logs should be stored in the GCS bucket
