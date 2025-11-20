@@ -12,7 +12,7 @@
 ~h
 # Command Line History (newest to oldest):
 :wq
-|2,0,1763614166,,"wq"
+|2,0,1763618670,,"wq"
 :q!
 |2,0,1763613849,,"q!"
 :WQ
@@ -32,38 +32,60 @@
 |3,1,36,0,1,0,1763466792,"k"
 
 # File marks:
-'0  10  46  ~/cloudbuild_prod.yaml
-|4,48,10,46,1763614166,"~/cloudbuild_prod.yaml"
-'1  16  48  ~/cloudbuild_prod.yaml
-|4,49,16,48,1763614110,"~/cloudbuild_prod.yaml"
+'0  7  86  ~/app.py
+|4,48,7,86,1763618670,"~/app.py"
+'1  10  46  ~/cloudbuild_prod.yaml
+|4,49,10,46,1763614166,"~/cloudbuild_prod.yaml"
 '2  16  48  ~/cloudbuild_prod.yaml
 |4,50,16,48,1763614110,"~/cloudbuild_prod.yaml"
-'3  2  13  ~/cloudbuild.yaml
-|4,51,2,13,1763614016,"~/cloudbuild.yaml"
-'4  55  21  ~/cloudbuild.yaml
-|4,52,55,21,1763613849,"~/cloudbuild.yaml"
+'3  16  48  ~/cloudbuild_prod.yaml
+|4,51,16,48,1763614110,"~/cloudbuild_prod.yaml"
+'4  2  13  ~/cloudbuild.yaml
+|4,52,2,13,1763614016,"~/cloudbuild.yaml"
 '5  55  21  ~/cloudbuild.yaml
 |4,53,55,21,1763613849,"~/cloudbuild.yaml"
 '6  55  21  ~/cloudbuild.yaml
-|4,54,55,21,1763612602,"~/cloudbuild.yaml"
+|4,54,55,21,1763613849,"~/cloudbuild.yaml"
 '7  55  21  ~/cloudbuild.yaml
 |4,55,55,21,1763612602,"~/cloudbuild.yaml"
-'8  11  0  ~/app.py
-|4,56,11,0,1763468727,"~/app.py"
-'9  1  59  ~/app.py
-|4,57,1,59,1763468124,"~/app.py"
+'8  55  21  ~/cloudbuild.yaml
+|4,56,55,21,1763612602,"~/cloudbuild.yaml"
+'9  11  0  ~/app.py
+|4,57,11,0,1763468727,"~/app.py"
 
 # Jumplist (newest first):
+-'  7  86  ~/app.py
+|4,39,7,86,1763618670,"~/app.py"
+-'  11  0  ~/app.py
+|4,39,11,0,1763618619,"~/app.py"
+-'  10  46  ~/cloudbuild_prod.yaml
+|4,39,10,46,1763614166,"~/cloudbuild_prod.yaml"
 -'  10  46  ~/cloudbuild_prod.yaml
 |4,39,10,46,1763614166,"~/cloudbuild_prod.yaml"
 -'  16  48  ~/cloudbuild_prod.yaml
 |4,39,16,48,1763614127,"~/cloudbuild_prod.yaml"
+-'  16  48  ~/cloudbuild_prod.yaml
+|4,39,16,48,1763614127,"~/cloudbuild_prod.yaml"
+-'  16  48  ~/cloudbuild_prod.yaml
+|4,39,16,48,1763614110,"~/cloudbuild_prod.yaml"
 -'  16  48  ~/cloudbuild_prod.yaml
 |4,39,16,48,1763614110,"~/cloudbuild_prod.yaml"
 -'  1  0  ~/cloudbuild_prod.yaml
 |4,39,1,0,1763614103,"~/cloudbuild_prod.yaml"
 -'  1  0  ~/cloudbuild_prod.yaml
 |4,39,1,0,1763614103,"~/cloudbuild_prod.yaml"
+-'  1  0  ~/cloudbuild_prod.yaml
+|4,39,1,0,1763614103,"~/cloudbuild_prod.yaml"
+-'  1  0  ~/cloudbuild_prod.yaml
+|4,39,1,0,1763614103,"~/cloudbuild_prod.yaml"
+-'  2  13  ~/cloudbuild.yaml
+|4,39,2,13,1763614016,"~/cloudbuild.yaml"
+-'  2  13  ~/cloudbuild.yaml
+|4,39,2,13,1763614016,"~/cloudbuild.yaml"
+-'  2  13  ~/cloudbuild.yaml
+|4,39,2,13,1763614016,"~/cloudbuild.yaml"
+-'  2  13  ~/cloudbuild.yaml
+|4,39,2,13,1763614016,"~/cloudbuild.yaml"
 -'  2  13  ~/cloudbuild.yaml
 |4,39,2,13,1763614016,"~/cloudbuild.yaml"
 -'  2  13  ~/cloudbuild.yaml
@@ -81,6 +103,18 @@
 -'  55  21  ~/cloudbuild.yaml
 |4,39,55,21,1763613861,"~/cloudbuild.yaml"
 -'  55  21  ~/cloudbuild.yaml
+|4,39,55,21,1763613861,"~/cloudbuild.yaml"
+-'  55  21  ~/cloudbuild.yaml
+|4,39,55,21,1763613861,"~/cloudbuild.yaml"
+-'  55  21  ~/cloudbuild.yaml
+|4,39,55,21,1763613861,"~/cloudbuild.yaml"
+-'  55  21  ~/cloudbuild.yaml
+|4,39,55,21,1763613861,"~/cloudbuild.yaml"
+-'  55  21  ~/cloudbuild.yaml
+|4,39,55,21,1763613849,"~/cloudbuild.yaml"
+-'  55  21  ~/cloudbuild.yaml
+|4,39,55,21,1763613849,"~/cloudbuild.yaml"
+-'  55  21  ~/cloudbuild.yaml
 |4,39,55,21,1763613849,"~/cloudbuild.yaml"
 -'  55  21  ~/cloudbuild.yaml
 |4,39,55,21,1763613849,"~/cloudbuild.yaml"
@@ -88,6 +122,18 @@
 |4,39,55,21,1763613849,"~/cloudbuild.yaml"
 -'  55  21  ~/cloudbuild.yaml
 |4,39,55,21,1763613849,"~/cloudbuild.yaml"
+-'  55  21  ~/cloudbuild.yaml
+|4,39,55,21,1763613849,"~/cloudbuild.yaml"
+-'  55  21  ~/cloudbuild.yaml
+|4,39,55,21,1763613849,"~/cloudbuild.yaml"
+-'  55  21  ~/cloudbuild.yaml
+|4,39,55,21,1763612602,"~/cloudbuild.yaml"
+-'  55  21  ~/cloudbuild.yaml
+|4,39,55,21,1763612602,"~/cloudbuild.yaml"
+-'  55  21  ~/cloudbuild.yaml
+|4,39,55,21,1763612602,"~/cloudbuild.yaml"
+-'  55  21  ~/cloudbuild.yaml
+|4,39,55,21,1763612602,"~/cloudbuild.yaml"
 -'  55  21  ~/cloudbuild.yaml
 |4,39,55,21,1763612602,"~/cloudbuild.yaml"
 -'  55  21  ~/cloudbuild.yaml
@@ -120,6 +166,30 @@
 |4,39,1,0,1763612441,"~/cloudbuild.yaml"
 -'  1  0  ~/cloudbuild.yaml
 |4,39,1,0,1763612441,"~/cloudbuild.yaml"
+-'  1  0  ~/cloudbuild.yaml
+|4,39,1,0,1763612441,"~/cloudbuild.yaml"
+-'  1  0  ~/cloudbuild.yaml
+|4,39,1,0,1763612441,"~/cloudbuild.yaml"
+-'  1  0  ~/cloudbuild.yaml
+|4,39,1,0,1763612441,"~/cloudbuild.yaml"
+-'  1  0  ~/cloudbuild.yaml
+|4,39,1,0,1763612441,"~/cloudbuild.yaml"
+-'  1  0  ~/cloudbuild.yaml
+|4,39,1,0,1763612441,"~/cloudbuild.yaml"
+-'  1  0  ~/cloudbuild.yaml
+|4,39,1,0,1763612441,"~/cloudbuild.yaml"
+-'  1  0  ~/cloudbuild.yaml
+|4,39,1,0,1763612441,"~/cloudbuild.yaml"
+-'  1  0  ~/cloudbuild.yaml
+|4,39,1,0,1763612441,"~/cloudbuild.yaml"
+-'  1  0  ~/cloudbuild.yaml
+|4,39,1,0,1763612441,"~/cloudbuild.yaml"
+-'  1  0  ~/cloudbuild.yaml
+|4,39,1,0,1763612441,"~/cloudbuild.yaml"
+-'  1  0  ~/cloudbuild.yaml
+|4,39,1,0,1763612441,"~/cloudbuild.yaml"
+-'  1  0  ~/cloudbuild.yaml
+|4,39,1,0,1763612441,"~/cloudbuild.yaml"
 -'  11  0  ~/app.py
 |4,39,11,0,1763468727,"~/app.py"
 -'  11  0  ~/app.py
@@ -184,78 +254,20 @@
 |4,39,11,0,1763468727,"~/app.py"
 -'  11  0  ~/app.py
 |4,39,11,0,1763468727,"~/app.py"
--'  1  59  ~/app.py
-|4,39,1,59,1763468588,"~/app.py"
--'  1  59  ~/app.py
-|4,39,1,59,1763468588,"~/app.py"
--'  1  59  ~/app.py
-|4,39,1,59,1763468588,"~/app.py"
--'  1  59  ~/app.py
-|4,39,1,59,1763468588,"~/app.py"
--'  1  59  ~/app.py
-|4,39,1,59,1763468588,"~/app.py"
--'  1  59  ~/app.py
-|4,39,1,59,1763468588,"~/app.py"
--'  1  59  ~/app.py
-|4,39,1,59,1763468588,"~/app.py"
--'  1  59  ~/app.py
-|4,39,1,59,1763468588,"~/app.py"
--'  1  59  ~/app.py
-|4,39,1,59,1763468588,"~/app.py"
--'  1  59  ~/app.py
-|4,39,1,59,1763468588,"~/app.py"
--'  1  59  ~/app.py
-|4,39,1,59,1763468588,"~/app.py"
--'  1  59  ~/app.py
-|4,39,1,59,1763468588,"~/app.py"
--'  1  59  ~/app.py
-|4,39,1,59,1763468588,"~/app.py"
--'  1  59  ~/app.py
-|4,39,1,59,1763468588,"~/app.py"
--'  1  59  ~/app.py
-|4,39,1,59,1763468588,"~/app.py"
--'  1  59  ~/app.py
-|4,39,1,59,1763468588,"~/app.py"
--'  1  59  ~/app.py
-|4,39,1,59,1763468588,"~/app.py"
--'  1  59  ~/app.py
-|4,39,1,59,1763468588,"~/app.py"
--'  1  59  ~/app.py
-|4,39,1,59,1763468588,"~/app.py"
--'  1  59  ~/app.py
-|4,39,1,59,1763468588,"~/app.py"
--'  1  59  ~/app.py
-|4,39,1,59,1763468588,"~/app.py"
--'  1  59  ~/app.py
-|4,39,1,59,1763468588,"~/app.py"
--'  1  59  ~/app.py
-|4,39,1,59,1763468588,"~/app.py"
--'  1  59  ~/app.py
-|4,39,1,59,1763468588,"~/app.py"
--'  1  59  ~/app.py
-|4,39,1,59,1763468588,"~/app.py"
--'  1  59  ~/app.py
-|4,39,1,59,1763468588,"~/app.py"
--'  1  59  ~/app.py
-|4,39,1,59,1763468588,"~/app.py"
--'  1  59  ~/app.py
-|4,39,1,59,1763468588,"~/app.py"
--'  1  59  ~/app.py
-|4,39,1,59,1763468588,"~/app.py"
--'  1  59  ~/app.py
-|4,39,1,59,1763468588,"~/app.py"
--'  1  59  ~/app.py
-|4,39,1,59,1763468588,"~/app.py"
--'  1  59  ~/app.py
-|4,39,1,59,1763468588,"~/app.py"
--'  3  15  ~/app.py
-|4,39,3,15,1763468124,"~/app.py"
--'  3  15  ~/app.py
-|4,39,3,15,1763468124,"~/app.py"
--'  3  15  ~/app.py
-|4,39,3,15,1763468124,"~/app.py"
 
 # History of marks within files (newest to oldest):
+
+> ~/app.py
+	*	1763618669	0
+	"	7	86
+	^	7	87
+	.	7	86
+	+	1	161
+	+	1	0
+	+	1	169
+	+	1	59
+	+	10	38
+	+	7	86
 
 > ~/cloudbuild_prod.yaml
 	*	1763614164	0
@@ -277,17 +289,6 @@
 	+	24	40
 	+	14	46
 	+	9	53
-
-> ~/app.py
-	*	1763468723	0
-	"	11	0
-	^	11	0
-	.	10	38
-	+	1	161
-	+	1	0
-	+	1	169
-	+	1	59
-	+	10	38
 
 > ~/Dockerfile
 	*	1763467995	0

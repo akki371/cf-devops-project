@@ -101,3 +101,30 @@ git config --global user.name "username"
 git config --global user.email "username@example.com"
 git commit -m "Add source code and multi-stage cloudbuild config"
 git status
+git add .
+git status
+git commit -m "Add source code and multi-stage cloudbuild config new"
+git status
+git remote add origin https://github.com/akki371/cloud-run-ci-project.git
+git status
+git push -u origin main
+git branch
+git push -u origin master
+git branch -M main
+git branch
+git push -u origin main
+git remote -v
+ls -al ~/.ssh
+ssh-keygen -t ed25519 -C "username@example.com"
+cat ~/.ssh/id_ed25519.pub
+git remote set-url origin git@github.com:akki371/cloud-run-ci-project.git
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519 # or id_rsa
+ssh -T git@github.com
+git push -u origin main
+ls
+cat cloudbuild_prod.yaml 
+ls
+cat cloudbuild_prod.yaml 
+vi app.py 
+git status
