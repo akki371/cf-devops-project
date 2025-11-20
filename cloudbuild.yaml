@@ -33,7 +33,7 @@ steps:
   - run
   - deploy
   - my-app-stage
-  - --image=gcr.io/temporal-parser-478606-d2/my-app:$COMMIT_SHA # Corrected typo here
+  - --image=gcr.io/temporal-parser-478606-d2/my-app:$COMMIT_SHA
   - --region=asia-south1 # Example Stage Region
   - --allow-unauthenticated
 
@@ -55,12 +55,6 @@ steps:
 images:
 - 'gcr.io/temporal-parser-478606-d2/my-app:$COMMIT_SHA'
 
-# These are top-level build configuration settings, correctly placed.
-# Note: If you are using a Cloud Build Trigger, the 'serviceAccount' specified
-#       here will be ignored in favor of the service account configured
-#       directly on the trigger itself. However, the 'options' will be respected
-
-# Add this line
-serviceAccount: 'projects/temporal-parser-478606-d2/serviceAccounts/136380032856-compute@developer.gserviceaccount.com'
+# TOP-LEVEL CONFIGURATION FOR LOGGING
 options:
-  logging: CLOUD_LOGGING_ONLY # This specifies that logs should be stored in the GCS bucket
+  logging: CLOUD_LOGGING_ONLY # This specifies that logs should only go to Cloud Logging
