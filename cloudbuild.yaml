@@ -1,4 +1,6 @@
 # Define a substitution variable to hold the name of the Prod approval trigger
+logsBucket: 'gs://my_test_bucket_for_cloudrun'
+
 substitutions:
   _PROD_TRIGGER_NAME: 'prod-approval-trigger'
 
@@ -61,5 +63,4 @@ images:
 #       directly on the trigger itself. However, the 'options' will be respected.
 serviceAccount: 'projects/temporal-parser-478606-d2/serviceAccounts/136380032856-compute@developer.gserviceaccount.com'
 options:
-  defaultLogsBucketBehavior: REGIONAL_USER_OWNED_BUCKET
   logging: GCS_ONLY # This addresses the error from the previous prompt (option b or c)
