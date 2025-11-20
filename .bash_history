@@ -94,3 +94,10 @@ ll
 ls
 git init
 git status
+git add .
+git status
+git commit -m "Add source code and multi-stage cloudbuild config"
+git config --global user.name "username"
+git config --global user.email "username@example.com"
+git commit -m "Add source code and multi-stage cloudbuild config"
+git status
