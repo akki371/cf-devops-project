@@ -55,6 +55,9 @@ steps:
 images:
 - 'gcr.io/temporal-parser-478606-d2/my-app:$COMMIT_SHA'
 
+<<<<<<< HEAD
 # TOP-LEVEL CONFIGURATION FOR LOGGING
+=======
+>>>>>>> 1092c2dd792d324f94302ab71bc0e9a81478b767
 options:
   logging: CLOUD_LOGGING_ONLY # This specifies that logs should only go to Cloud Logging

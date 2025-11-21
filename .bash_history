@@ -128,3 +128,44 @@ ls
 cat cloudbuild_prod.yaml 
 vi app.py 
 git status
+git add .
+git status
+git commit -m "new commit after creating triggers"
+git push origin main
+git status
+ls
+vi cloudbuild.yaml 
+git status
+git add cloudbuild.yaml 
+git status
+git commit -m 
+git commit -m "new commit"
+git push -u origin main
+git status
+git branch
+git remote -v
+gcloud builds submit --config=cloudbuild.yaml .
+ls
+pwd
+git init
+git remote -v
+vi app.py 
+git status
+git add app.py 
+git status
+git commit -m "new file"
+git status
+git push origin main
+git pull origin main
+ls
+vi app.py 
+git status
+git pull --no-rebase
+git tree
+tree .
+git status --all
+git status --oneline
+git pull -u origin main
+git pull origin main
+vi app.py 
+git status
