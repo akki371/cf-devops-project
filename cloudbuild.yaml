@@ -1,43 +1,46 @@
-# Define a substitution variable to hold the name of the Prod approval trigger
+# cloudbuild.yaml (Trigger 1: Main CI/CD)
 substitutions:
-  _PROD_TRIGGER_NAME: 'prod-approval-trigger'
+  _PROD_TRIGGER_NAME: 'prod-cf-approval-trigger'
+  _ENTRY_POINT: 'http_entry_point'
+  _RUNTIME: 'python312'
+  _DEV_REGION: 'us-central1'
+  _STAGE_REGION: 'us-central1'
+  _PROD_REGION: 'asia-south1'
 
 steps:
-# 1. Build the container image (CI)
-- name: 'gcr.io/cloud-builders/docker'
-  id: 'Build Image'
-  args: ['build', '-t', 'gcr.io/temporal-parser-478606-d2/my-app:$COMMIT_SHA', '.']
-
-# 2. Push the single image to Artifact Registry (CI)
-- name: 'gcr.io/cloud-builders/docker'
-  id: 'Push Image'
-  args: ['push', 'gcr.io/temporal-parser-478606-d2/my-app:$COMMIT_SHA']
-
-# 3. Deploy to DEV environment (CD - Automatic)
+# 1. Deploy to DEV environment (Automatic)
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-  id: 'Deploy to DEV'
+  id: 'Deploy to DEV CF'
   args:
   - gcloud
-  - run
+  - functions
   - deploy
-  - my-app-dev
-  - --image=gcr.io/temporal-parser-478606-d2/my-app:$COMMIT_SHA
-  - --region=asia-south1 # Example Dev Region
-  - --allow-unauthenticated # or specific authentication flags
-
-# 4. Deploy to STAGE environment (CD - Automatic)
-- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-  id: 'Deploy to STAGE'
-  args:
-  - gcloud
-  - run
-  - deploy
-  - my-app-stage
-  - --image=gcr.io/temporal-parser-478606-d2/my-app:$COMMIT_SHA
-  - --region=asia-south1 # Example Stage Region
+  - my-cf-app-dev
+  - --gen2
+  - --runtime=$_RUNTIME
+  - --entry-point=$_ENTRY_POINT
+  - --source=.
+  - --region=$_DEV_REGION
+  - --trigger-http
   - --allow-unauthenticated
 
-# 5. Programmatically Trigger the PROD Approval Gate
+# 2. Deploy to STAGE environment (Automatic)
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  id: 'Deploy to STAGE CF'
+  args:
+  - gcloud
+  - functions
+  - deploy
+  - my-cf-app-stage
+  - --gen2
+  - --runtime=$_RUNTIME
+  - --entry-point=$_ENTRY_POINT
+  - --source=.
+  - --region=$_STAGE_REGION
+  - --trigger-http
+  - --allow-unauthenticated
+
+# 3. Programmatically Trigger the PROD Approval Gate
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   id: 'Trigger PROD Approval'
   args:
@@ -45,19 +48,7 @@ steps:
   - builds
   - triggers
   - run
-  - $_PROD_TRIGGER_NAME # Uses the trigger name defined above
+  - $_PROD_TRIGGER_NAME # Targets the separate trigger
   - '--branch=main'
-  # Pass the built image SHA as a substitution variable to the Prod trigger
-  - '--substitutions=_IMAGE_SHA=gcr.io/temporal-parser-478606-d2/my-app:$COMMIT_SHA'
-  - '--region=asia-south1' # Cloud Build trigger run command requires the trigger region
-
-# This section lists the images that Cloud Build expects to be pushed to Artifact Registry
-images:
-- 'gcr.io/temporal-parser-478606-d2/my-app:$COMMIT_SHA'
-
-<<<<<<< HEAD
-# TOP-LEVEL CONFIGURATION FOR LOGGING
-=======
->>>>>>> 1092c2dd792d324f94302ab71bc0e9a81478b767
-options:
-  logging: CLOUD_LOGGING_ONLY # This specifies that logs should only go to Cloud Logging
+  - '--substitutions=_COMMIT_SHA=$COMMIT_SHA' # Passes source code revision
+  - '--region=global' # Cloud Build trigger run command is global or its region

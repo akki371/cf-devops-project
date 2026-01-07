@@ -169,3 +169,44 @@ git pull -u origin main
 git pull origin main
 vi app.py 
 git status
+git add .
+git status
+git commit -m "new files"
+git status
+git push origin main
+git status
+git push origin main
+git pull origin main
+git status
+ls -al
+vi app.py 
+git status
+git add app.py 
+git commit -m 'new one'
+git status
+git push origin main
+ls
+tree .
+apt get tree
+ll
+cat app.py
+ls
+vi main.py
+ls
+cat requirements.txt q
+cat requirements.txt 
+vi requirements.txt 
+vi cloudbuild.yaml 
+ls
+vi cloudbuild_prod.yaml 
+ls
+vi cloudbuild.yaml
+cat cloudbuild.yaml 
+vi cloudbuild_prod.yaml 
+cat cloudbuild_prod.yaml 
+vi cloudbuild_prod.yaml 
+cat cloudbuild_prod.yaml 
+git init
+git status
+git remote -c
+git remote -v

@@ -1,16 +1,26 @@
-# cloudbuild_prod.yaml
+# cloudbuild_prod.yaml (Trigger 2: Prod Deployment)
+substitutions:
+  _ENTRY_POINT: 'http_entry_point'
+  _RUNTIME: 'python312'
+  _PROD_REGION: 'asia-south1'
+
 steps:
+# 1. Deploy to PROD environment (Gated by Approval)
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-  id: 'Deploy to PROD'
+  id: 'Deploy to PROD CF'
   args:
   - gcloud
-  - run
+  - functions
   - deploy
-  - my-app-prod # Your Production service name
-  - '--image=$_IMAGE_SHA' # Uses the image tag passed from the main pipeline
-  - '--region=asia-south1' # Your Prod Region
-  - '--allow-unauthenticated' # or required security flags
+  - my-cf-app-prod # PROD Function Name
+  - --gen2
+  - --runtime=$_RUNTIME
+  - --entry-point=$_ENTRY_POINT
+  - --source=.
+  - '--region=$_PROD_REGION'
+  - --trigger-http
+  - --allow-unauthenticated
 
+# Define a default for the substitution variable
 substitutions:
-  # Define the substitution variable expected by the trigger run command
-  _IMAGE_SHA: 'gcr.io/temporal-parser-478606-d2/my-app:default'
+  _COMMIT_SHA: 'default'
