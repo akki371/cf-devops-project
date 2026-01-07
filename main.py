@@ -1,4 +1,4 @@
-# main.py
+# main.py file
 from flask import Flask, request
 app = Flask(__name__)
 

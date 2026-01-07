@@ -51,4 +51,4 @@ steps:
   - $_PROD_TRIGGER_NAME # Targets the separate trigger
   - '--branch=main'
   - '--substitutions=_COMMIT_SHA=$COMMIT_SHA' # Passes source code revision
-  - '--region=global' # Cloud Build trigger run command is global or its region
+  - '--region=asia-south1' # Cloud Build trigger run command is global or its region.

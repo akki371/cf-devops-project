@@ -21,6 +21,6 @@ steps:
   - --trigger-http
   - --allow-unauthenticated
 
-# Define a default for the substitution variable
+# Define a default for the substitution variable.
 substitutions:
   _COMMIT_SHA: 'default'
