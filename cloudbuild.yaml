@@ -40,7 +40,7 @@ steps:
   - --trigger-http
   - --allow-unauthenticated
 
-# 3. Programmatically Trigger the PROD Approval Gate.
+# 3. Programmatically Trigger the PROD Approval Gate..
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   id: 'Trigger PROD Approval'
   args:
