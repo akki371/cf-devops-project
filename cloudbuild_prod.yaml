@@ -24,7 +24,7 @@ steps:
   - --gen2
   - --runtime=$_RUNTIME
   - --entry-point=$_ENTRY_POINT
-  - --source=. # This now correctly refers to the checked-out code
+  - --source=. # This now correctly refers to the checked-out code.
   - '--region=$_PROD_REGION'
   - --trigger-http
   - --allow-unauthenticated
