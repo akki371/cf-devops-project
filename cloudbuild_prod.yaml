@@ -24,3 +24,5 @@ steps:
 # Define a default for the substitution variable.
 substitutions:
   _COMMIT_SHA: 'default'
+options:
+  logging: CLOUD_LOGGING_ONLY # <--- THIS MUST BE PRESENT

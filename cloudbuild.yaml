@@ -52,3 +52,9 @@ steps:
   - '--branch=main'
   - '--substitutions=_COMMIT_SHA=$COMMIT_SHA' # Passes source code revision
   - '--region=asia-south1' # Cloud Build trigger run command is global or its region.
+# ... (your existing steps, substitutions, and images sections) ...
+
+# This block MUST be at the top level, like this:
+options:
+  logging: CLOUD_LOGGING_ONLY
+
