@@ -1,11 +1,19 @@
-# cloudbuild_prod.yaml (Trigger 2: Prod Deployment)
+# Corrected Inline Config for 'prod-cf-approval-trigger'
+
+# 1. MERGE the substitution blocks into one.
 substitutions:
   _ENTRY_POINT: 'http_entry_point'
   _RUNTIME: 'python312'
   _PROD_REGION: 'asia-south1'
+  _COMMIT_SHA: 'default' # This is a fallback, it will be overridden by the main trigger
 
 steps:
-# 1. Deploy to PROD environment (Gated by Approval)
+# 2. ADD this step to checkout the correct source code.
+- name: 'gcr.io/cloud-builders/git'
+  id: 'Checkout Source'
+  args: ['checkout', '$_COMMIT_SHA']
+
+# 3. Your deployment step will now work correctly.
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   id: 'Deploy to PROD CF'
   args:
@@ -16,13 +24,11 @@ steps:
   - --gen2
   - --runtime=$_RUNTIME
   - --entry-point=$_ENTRY_POINT
-  - --source=.
+  - --source=. # This now correctly refers to the checked-out code
   - '--region=$_PROD_REGION'
   - --trigger-http
   - --allow-unauthenticated
 
-# Define a default for the substitution variable.
-substitutions:
-  _COMMIT_SHA: 'default'
 options:
-  logging: CLOUD_LOGGING_ONLY # <--- THIS MUST BE PRESENT
+  logging: CLOUD_LOGGING_ONLY
+
